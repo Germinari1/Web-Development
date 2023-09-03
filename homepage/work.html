@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--responsiveness-->
+    <meta name="description" content="Hello, there! My name is Lucas Germinari, a Computer Scientist, entrepreneur, and programmmer.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Work with me</title>
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // Find the button by its ID
+  const alertButton = document.getElementById('fb_btn');
+
+  // Add a click event listener to the button
+  alertButton.addEventListener('click', function() {
+    // Show the alert when the button is clicked
+    alert('Thank you, person! I´ll carefully analyse your thoughts');
+  });
+});
+</script>
+
+<body>
+    <header> <!--nav bar-->
+        <nav class="navbar">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <img id="header-logo" src="https://pngimg.com/uploads/letter_L/small/letter_L_PNG123.png" alt="Logo" width="80px" height="80px">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link" href="work.html">Provide feedback</a>
+                  <a class="nav-link" href="About.html">Who am I?</a>
+                  <a class="nav-link" href="contact.html">Contact me</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+<body>
+  <div class="wrapper">
+    <form class="form">
+      <div class="pageTitle title">What do you think about this website?</div>
+      <div class="secondaryTitle title">I would greatly appreciate your feedback!</div>
+      <input type="text" class="name formEntry" placeholder="Something you liked about it..." />
+      <input type="text" class="email formEntry" placeholder="Something that needs to be enhanced..."/>
+      <!--<textarea class="message formEntry" placeholder="Describe you project idea. Details are more than welcome."></textarea>-->
+      <!--<input type="checkbox" class="termsConditions" value="Term">-->
+      <!--<label style="color: grey" for="terms"> I Accept the <span style="color: #0e3721">Terms of Use</span> & <span style="color: #0e3721">Privacy Policy</span>.</label><br>-->
+      <button id ="fb_btn" class="submit formEntry" onclick="thanks()">Submit</button>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
