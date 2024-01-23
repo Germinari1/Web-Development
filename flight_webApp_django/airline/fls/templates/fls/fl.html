@@ -1,0 +1,31 @@
+{% extends "fls/layout.html" %}
+
+{% block body %}
+    <h1>Flight {{ fl.id }}</h1>
+    <ul>
+        <li>Origin: {{ fl.origin }}</li>
+        <li>Destination: {{ fl.destination }}</li>
+        <li>Duration: {{ fl.duration }}</li>
+    </ul>
+    <h2>Passengers</h2>
+    <ul>
+        {% for p in passengers %}
+            <li>{{ p }}</li>
+        {% empty %}
+            <li>No passengers</li>
+        {% endfor %}
+    </ul>
+
+    <form action="{% url 'book' fl.id %}" method="post">
+        {% csrf_token %}
+        <select name="passenger">
+            {% for passenger in non_passengers %}
+                <option value="{{ passenger.id }}">{{ passenger }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="submit">
+    </form>
+
+    <a href="{% url 'index' %}">All Flights</a>
+{% endblock %}
